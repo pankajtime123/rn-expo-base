@@ -4,13 +4,13 @@ import { StyleSheet } from 'react-native';
 import AppPressable, { AppPressableProps } from '../../ui/AppPressable/AppPressable';
 import AppText from '../../ui/AppText/AppText';
 
-interface KadamButtonProps extends AppPressableProps {
+interface baseButtonProps extends AppPressableProps {
   text?: string,
   textType?: FontStylesType,
   textColor?: string
 }
 
-const BaseButton: React.FC<KadamButtonProps> = ({
+const BaseButton: React.FC<baseButtonProps> = ({
   children,
   text,
   textType = "helveticaBold12px",
@@ -31,19 +31,19 @@ const BaseButton: React.FC<KadamButtonProps> = ({
 };
 
 
-const Primary: FC<KadamButtonProps> = (props) => {
+const Primary: FC<baseButtonProps> = (props) => {
   return <BaseButton {...props} style={[styles.primary, StyleSheet.flatten(props?.style)]} />
 }
 
-const Secondary: FC<KadamButtonProps> = (props) => {
+const Secondary: FC<baseButtonProps> = (props) => {
   return <BaseButton {...props} style={[styles.secondary]} />
 }
 
-const KadamButton = {
-  Primary: (props: KadamButtonProps) => (
+const baseButton = {
+  Primary: (props: baseButtonProps) => (
     <Primary {...props} textColor={props?.textColor || '#fff'} />
   ),
-  Secondary: (props: KadamButtonProps) => (
+  Secondary: (props: baseButtonProps) => (
     <Secondary {...props} textColor={props?.textColor || '#5F34F6'} style={[styles.secondary, StyleSheet.flatten(props?.style)]} />
   ),
 };
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default KadamButton;
+export default baseButton;

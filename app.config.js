@@ -4,19 +4,19 @@ const versionCode = 1
 
 const environmentConfig = {
   development: {
-    name: "Kadam Dev",
+    name: "base Dev",
     baseURL: '',
     package: "com.base.dev",
     environment: "development",
   },
   production: {
-    name: "Kadam",
+    name: "base",
     baseURL: '',
     package: 'com.base',
     environment: "production",
   }, 
   uat: {
-    name: "Kadam",
+    name: "base",
     baseURL: '',
     package: 'com.base',
     environment: "uat",

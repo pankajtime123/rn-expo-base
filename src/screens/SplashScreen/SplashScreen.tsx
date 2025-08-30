@@ -12,7 +12,7 @@ const SplashScreen = ({ rootStore }: PropsWithStore<{}>) => {
         <View style={styles.container}>
             <StatusBar hidden />
             <AppText textAlign='center' type={'helveticaBlack24px'} >
-                {'Kadam'}
+                {'base'}
             </AppText>
         </View>
     )
