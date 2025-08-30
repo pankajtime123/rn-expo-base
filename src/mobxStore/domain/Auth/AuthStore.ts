@@ -1,4 +1,3 @@
-import { IAuthData, IUserProfile } from "@/src/features/Login/models/login.interface";
 import { RootStackScreens } from "@/src/navigation/RootStack/types";
 import { clearSecureEntries, saveTokens, saveUser } from "@/src/services/token.service";
 import { resetAndNavigate } from "@/src/utils/NavigationUtils";
@@ -9,11 +8,11 @@ import type { RootStoreType } from "../../RootStore";
 export class AuthStore {
   rootStore: RootStoreType;
 
-  @observable user: IUserProfile | undefined = undefined;
+  @observable user: any | undefined = undefined;
   @observable isLoading: boolean = false;
   @observable error = null;
   @observable isAuthenticated: boolean = false
-  @observable authData: IAuthData | undefined= undefined 
+  @observable authData: any | undefined= undefined 
 
   constructor(rootStore: RootStoreType) {
     this.rootStore = rootStore
@@ -21,7 +20,7 @@ export class AuthStore {
   }
 
   @action
-  async setUser(data: IAuthData | undefined) {
+  async setUser(data: any | undefined) {
     this.isAuthenticated = !!data?.user
 
     try {
