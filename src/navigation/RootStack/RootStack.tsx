@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useInternetAvailability } from '../../hooks/appConfigs/useInternetAvailability';
 import RoughScreen from '../../screens/RoughScreen/RoughScreen';
 import SplashScreen from '../../screens/SplashScreen/SplashScreen';
-import { getToken } from '../../utils/storage';
 import { RootStackScreens } from './types';
 
 
@@ -16,8 +15,6 @@ export default function RootStack() {
 
   useEffect(() => {
     const checkLoginStatus = () => {
-      const token = getToken();
-      setIsLoggedIn(!!token);
     };
     checkLoginStatus();
   }, []);

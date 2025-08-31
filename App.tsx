@@ -12,12 +12,11 @@ import { NetworkLoggerWrapper } from './src/components/tools/Network/NetworkLogg
 import { useApp } from './src/hooks/appConfigs/useApp';
 import RootStack from './src/navigation/RootStack/RootStack';
 import { navigationRef } from './src/utils/NavigationUtils';
-import { storage } from './src/utils/storage';
+
 
 function App(): React.JSX.Element {
     const { rootStore, loaded, error } = useApp()
     const isDarkMode = useColorScheme() === 'dark';
-    const appLanguage = storage.getString('appLanguage') || 'en';
 
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
