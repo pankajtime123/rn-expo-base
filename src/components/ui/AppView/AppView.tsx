@@ -25,6 +25,7 @@ interface AppViewProps {
   mb?: number;
   w?: number;
   h?: number;
+  flex?: number;
 }
 
 const AppView: React.FC<AppViewProps> = ({
@@ -37,6 +38,7 @@ const AppView: React.FC<AppViewProps> = ({
   borderRadius = 0,
   gap = 0,
   center,
+  flex,
   w,
   h,
   px,
@@ -71,6 +73,7 @@ const AppView: React.FC<AppViewProps> = ({
     width: w,
     height: h,
     alignSelf,
+    flex
   };
 
   return (

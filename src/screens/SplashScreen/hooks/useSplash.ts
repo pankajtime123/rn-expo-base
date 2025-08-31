@@ -39,9 +39,12 @@ export const useSplash = (rootStore: RootStoreType) => {
 
     useEffect(() => {
         let timer = setTimeout(async () => {
-            await checkedUserLoggedIn()
-            await handleNavigation()
-        }, 2800)
+            // await checkedUserLoggedIn()
+            // await handleNavigation()
+
+            resetAndNavigate(RootStackScreens.MainScreen)
+
+        }, 1000)
         return () => {
             clearTimeout(timer)
         }

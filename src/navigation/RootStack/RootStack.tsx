@@ -19,11 +19,10 @@ export default function RootStack() {
     checkLoginStatus();
   }, []);
 
-  if (isLoggedIn === null) return null;
-  if (!isConnected) {
-    return
-    // return <NoInternet onRetry={recheckConnection} />;
-  }
+  // if (!isConnected) {
+  //   return
+  //   // return <NoInternet onRetry={recheckConnection} />;
+  // }
 
   return (
     <Stack.Navigator
