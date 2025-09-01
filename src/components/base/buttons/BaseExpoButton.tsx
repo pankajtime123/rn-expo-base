@@ -39,7 +39,7 @@ const Secondary: FC<baseButtonProps> = (props) => {
   return <BaseButton {...props} style={[styles.secondary]} />
 }
 
-const baseButton = {
+const BaseExpoButton = {
   Primary: (props: baseButtonProps) => (
     <Primary {...props} textColor={props?.textColor || '#fff'} />
   ),
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default baseButton;
+export default BaseExpoButton;
