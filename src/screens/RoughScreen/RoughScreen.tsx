@@ -5,7 +5,7 @@ import AppView from '@/src/components/ui/AppView/AppView';
 import { screenWidth } from '@/src/utils/resizing';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet } from 'react-native';
-import Typehead from '../FaltuScreens/Typehead';
+import HorizontalCircularCarousel from '../FaltuScreens/HorizontalCircularCarousel';
 
 const squares = Array.from({ length: 5 }).map((_, i) => ({ id: i.toString() }));
 
@@ -45,7 +45,8 @@ const RoughScreen = () => {
       </AppRow>
       <Timer /> */}
 
-      <Typehead />
+      {/* <Typehead /> */}
+      <HorizontalCircularCarousel/>
     </AppView>
   )
 }
